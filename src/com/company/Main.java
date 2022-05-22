@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
         // Binary search code will be here
-        int []arr={23,456,7899,8908978};
-        int target=342;
+        int []arr={1,2,3,6,7,8,10,16};
+        int target=9;
         int ans=search(arr,target);
         System.out.println(ans);
 
@@ -25,6 +25,6 @@ public class Main {
            }
        }
 
-        return -1;
+        return s;
     }
 }

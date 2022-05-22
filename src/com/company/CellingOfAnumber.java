@@ -14,6 +14,30 @@ step 2:search the greater than target value
 step 3: select the lowest number from the greater list
 
          */
+       int []arr={1,2,3,5,6,76,453};
+       int target=34;
+       int ans=cellingofANumber(arr,target);
+        System.out.println(ans);
 
+    }
+    //return the index of smallest no >=target
+    static int cellingofANumber(int []arr,int target){
+        //but what if the target  greater than the greatest number in the arrayy
+          int start=0;
+          int end=arr.length-1;
+          while (start<=end){
+              int mid=start+(end-start)/2;
+
+              if (target>arr[mid]){
+                  start=mid+1;
+              }
+              if (target<arr[mid]){
+                  end=mid-1;
+              }
+              else {
+                  return mid;
+              }
+          }
+        return start;
     }
 }
