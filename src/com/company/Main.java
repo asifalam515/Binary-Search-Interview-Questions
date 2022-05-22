@@ -25,6 +25,6 @@ public class Main {
            }
        }
 
-        return s;
+        return -1;
     }
 }

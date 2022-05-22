@@ -15,7 +15,7 @@ step 3: select the lowest number from the greater list
 
          */
        int []arr={1,2,3,5,6,76,453};
-       int target=34;
+       int target=5;
        int ans=cellingofANumber(arr,target);
         System.out.println(ans);
 
