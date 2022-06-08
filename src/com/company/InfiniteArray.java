@@ -14,8 +14,8 @@ int  target=10;
         int end=1;
         //condition for the target to lay in the range
         while ( target>arr[end]){
-            int temp=end+1;
-           //double the box value
+            int temp=end+1; //here temp is my new start
+            // double the box value
             //end=previous end+sizeof box *2
            end=end+(end-start+1)*2;
            start =temp;
