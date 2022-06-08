@@ -4,29 +4,20 @@ import javax.swing.*;
 // will code later
 public class SmallestLetter {
     public static void main(String[] args) {
-        int []arr={1,2,3,4,5,6,7,87,99};
-        int target=4;
-         int ans=smallestNumber(arr,target);
-        System.out.println(ans);
+
     }
-    static int smallestNumber(int []arr,int target){
+    static int smallestNumber(char []letters,int target){
         int start=0;
-        int end=arr.length-1;
-        if (start>arr[arr.length-1]){
-            return -1;
-        }
-        while (end>=start){
+        int end=letters.length-1;
+        while (start<=end){
             int mid=start+(end-start)/2;
-            if (target>arr[mid]){
+            if (letters[mid]<target){
                 start=mid+1;
-            }
-            else if (target<arr[mid]){
+            }else if (letters[mid]>target){
                 end=mid-1;
             }
-            else if (target==arr[mid]){
-                return mid;
-            }
+
         }
-        return start;
+        return letters[start%letters.length];
     }
 }
